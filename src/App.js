@@ -1,4 +1,4 @@
-import Counter from "./features/counter/Counter";
+// import Counter from "./features/counter/Counter";
 import PostList from "./features/posts/postList";
 import AddNewPost from "./features/posts/AddPost";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -8,8 +8,8 @@ import EditPost from "./features/posts/EditPost";
 import UserList from "./features/users/userList";
 import UserItems from "./features/users/userItems";
 import NotFound from "./Component/NotFound";
-import Memo from "./Learnings/UseMemo";
-import Context from "./Learnings/UseContext";
+// import Memo from "./Learnings/UseMemo";
+// import Context from "./Learnings/UseContext";
 import { createContext, useState } from "react";
 
 export const AppContext = createContext("");

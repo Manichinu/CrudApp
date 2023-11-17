@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectAllPosts, newPost, deletePost, updatePost, updatePosts, deletePosts } from "./postSlice";
+import { selectAllPosts, updatePosts, deletePosts } from "./postSlice";
 import { useEffect, useState } from "react";
 import { fetchUsers, selectUsers, userStatus } from "../users/userSlice";
 import { useNavigate, useParams } from "react-router-dom";

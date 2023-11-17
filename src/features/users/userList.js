@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectUsers } from "./userSlice";
 import { Link } from "react-router-dom";
 

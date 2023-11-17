@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { selectAllPosts } from "./postSlice";
@@ -20,7 +20,7 @@ const SinglePostPage = () => {
                 {/* <p>{selectedPost.id}</p> */}
                 <h4>{selectedPost.title}</h4>
                 <p>{selectedPost.body.substring(0, 40)}</p>
-                <Link to={`/post/edit/${selectedPost.id}`} style={{color:"white"}}>Edit Post</Link>
+                <Link to={`/post/edit/${selectedPost.id}`} style={{ color: "white" }}>Edit Post</Link>
                 <div>by <Author userid={selectedPost.userId} />&nbsp;
                     <TimeCalculation time={selectedPost.date} /> </div>
                 <div><Reactions post={selectedPost} /></div>

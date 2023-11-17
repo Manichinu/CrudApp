@@ -1,15 +1,14 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { selectAllPosts } from "../posts/postSlice";
 import { selectedUser } from "./userSlice";
-import { useEffect } from "react";
-import { getPostsStatus } from "../posts/postSlice";
+// import { getPostsStatus } from "../posts/postSlice";
 
 
 
 const UserItems = () => {
     const { userId } = useParams();
-    const status = useSelector(getPostsStatus)
+    // const status = useSelector(getPostsStatus)
     let AllPosts, posts, Name, user;
     AllPosts = useSelector(selectAllPosts);
     posts = AllPosts.filter((post) => post.userId == userId)

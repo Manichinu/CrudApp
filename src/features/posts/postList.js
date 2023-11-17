@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectAllPosts, addPost, getPostsError, getPostsStatus, fetchPosts } from "./postSlice";
-import { selectUsers } from "../users/userSlice";
+import { selectAllPosts, getPostsError, getPostsStatus } from "./postSlice";
+// import { selectUsers } from "../users/userSlice";
 import Author from "./postUser";
 import TimeCalculation from "./TimeAgo";
 import Reactions from "./ReactionButtons";
@@ -12,7 +12,7 @@ const PostList = () => {
     const posts = useSelector(selectAllPosts);
     const postsStatus = useSelector(getPostsStatus);
     const postsError = useSelector(getPostsError);
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     // useEffect(() => {
     //     if (postsStatus == 'idle') {
