@@ -11,6 +11,7 @@ import NotFound from "./Component/NotFound";
 // import Memo from "./Learnings/UseMemo";
 // import Context from "./Learnings/UseContext";
 import { createContext, useState } from "react";
+import Norerender from "./Learnings/UseRef";
 
 export const AppContext = createContext("");
 
@@ -23,6 +24,7 @@ function App() {
         <Header />
         {/* <Memo /> */}
         {/* <Context /> */}
+        {/* <Norerender /> */}
         <Routes>
           <Route path="/" element={<PostList />} />
           <Route path="post" >
