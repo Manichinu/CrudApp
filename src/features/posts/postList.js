@@ -6,6 +6,7 @@ import Author from "./postUser";
 import TimeCalculation from "./TimeAgo";
 import Reactions from "./ReactionButtons";
 import { Link } from "react-router-dom";
+import Skeleton from '@mui/material/Skeleton';
 
 
 const PostList = () => {
@@ -41,7 +42,20 @@ const PostList = () => {
         })
     }
     else if (postsStatus == "loading") {
-        postItems = <p>Loading...</p>
+        // postItems = <p style={{ textAlign: "center" }}>Loading...</p>
+        postItems = Array.from({ length: 100 }, (_, index) => (
+            <div className="col-6 col-md-4 shadow p-3 mb-5 bg-white rounded" key={`loading-${index}`}>
+                <Skeleton variant="rectangular" width="100%" height={200} animation="wave" />
+                <div key={`loading-${index}`}>
+                    <Skeleton variant="text" width="60%" height={24} animation="wave" />
+                    <Skeleton variant="text" width="80%" height={16} animation="wave" />
+                    <Skeleton variant="text" width="40%" height={16} animation="wave" />
+                    <Skeleton variant="text" width="20%" height={16} animation="wave" />
+                </div>
+            </div>
+        ));
+
+
     }
     else if (postsStatus == "failed") {
         postItems = <p>{postsError}</p>

@@ -12,11 +12,18 @@ import NotFound from "./Component/NotFound";
 // import Context from "./Learnings/UseContext";
 import { createContext, useState } from "react";
 import Norerender from "./Learnings/UseRef";
+import Profile from "./Learnings/HOC/profile";
 
 export const AppContext = createContext("");
 
 function App() {
   const [name, setName] = useState("demo")
+  // var myInterval = setInterval(() => {
+  //   console.log("This is Redux")
+  // }, 1000)
+  // setTimeout(() => {
+  //   clearInterval(myInterval);
+  // }, 3000);
 
   return (
     <>
@@ -25,6 +32,7 @@ function App() {
         {/* <Memo /> */}
         {/* <Context /> */}
         {/* <Norerender /> */}
+        {/* <Profile /> */}
         <Routes>
           <Route path="/" element={<PostList />} />
           <Route path="post" >
